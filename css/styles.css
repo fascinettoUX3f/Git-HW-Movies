@@ -1,0 +1,376 @@
+/* ========================================
+   1. GLOBAL STYLES
+======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+:root {
+    --primary: #00B492;
+    --primary-light: #22E4C0;
+    --secondary: #2B3D50;
+    --dark: #182129;
+    --gray: #495057;
+    --gray-light: #E6E6E6;
+    --light: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--dark);
+    background-color: var(--light);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--secondary);
+}
+
+
+/* ========================================
+   2. HERO / HEADER
+======================================== */
+
+.hero {
+    min-height: 500px;
+
+    background-image:
+        linear-gradient(
+            rgba(24, 33, 41, 0.65),
+            rgba(24, 33, 41, 0.75)
+        ),
+        url("../images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    color: var(--light);
+}
+
+.hero-content {
+    padding: 40px 20px;
+}
+
+.hero h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    font-size: 18px;
+}
+
+.profile-image {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: 2px solid var(--primary-light);
+}
+
+
+/* ========================================
+   3. MAIN CONTENT
+======================================== */
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 70px 20px;
+}
+
+section h2 {
+    color: var(--secondary);
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+
+/* ========================================
+   4. MOVIES
+======================================== */
+
+.movies {
+    margin-bottom: 80px;
+}
+
+.movie {
+    display: flex;
+    gap: 35px;
+
+    padding: 30px 0;
+
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.movie:first-of-type {
+    padding-top: 0;
+}
+
+.movie-image {
+    width: 220px;
+    height: 320px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    flex-shrink: 0;
+
+    box-shadow: 0 8px 20px rgba(24, 33, 41, 0.15);
+}
+
+.movie-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding-top: 5px;
+}
+
+.movie-ranking {
+    display: inline-block;
+
+    color: var(--primary);
+    font-size: 16px;
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+.movie h3 {
+    color: var(--dark);
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.movie-year {
+    color: var(--gray);
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.movie-director {
+    color: var(--gray);
+    font-size: 15px;
+    margin-bottom: 18px;
+}
+
+.movie-description {
+    color: var(--gray);
+    margin-bottom: 20px;
+    max-width: 700px;
+}
+
+.movie a {
+    display: inline-block;
+
+    background-color: var(--primary);
+    color: var(--light);
+
+    padding: 10px 20px;
+
+    border-radius: 5px;
+
+    font-weight: 600;
+
+    transition: background-color 0.2s ease;
+}
+
+.movie a:hover {
+    background-color: var(--secondary);
+    color: var(--light);
+}
+
+
+/* ========================================
+   5. COMMENTS
+======================================== */
+
+.comments {
+    padding: 50px;
+
+    background-color: var(--gray-light);
+
+    border-radius: 10px;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 45px;
+}
+
+.comment-form label {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.comment-form textarea {
+    width: 100%;
+
+    padding: 15px;
+
+    font-family: inherit;
+    font-size: 16px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    resize: vertical;
+
+    margin-bottom: 15px;
+}
+
+.comment-form textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.comment-form button {
+    align-self: flex-start;
+
+    padding: 10px 22px;
+
+    background-color: var(--secondary);
+    color: var(--light);
+
+    border: none;
+    border-radius: 5px;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.comment-form button:hover {
+    background-color: var(--primary);
+}
+
+.comment {
+    background-color: var(--light);
+
+    padding: 20px;
+
+    margin-bottom: 15px;
+
+    border-left: 4px solid var(--primary);
+
+    border-radius: 5px;
+}
+
+.comment h3 {
+    color: var(--secondary);
+    font-size: 16px;
+
+    margin-bottom: 5px;
+}
+
+.comment p {
+    color: var(--gray);
+}
+
+
+/* ========================================
+   6. FOOTER
+======================================== */
+
+footer {
+    background-color: var(--dark);
+
+    color: var(--gray-light);
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    font-size: 14px;
+}
+
+footer p {
+    margin-bottom: 8px;
+}
+
+footer p:last-child {
+    color: var(--gray);
+}
+
+
+/* ========================================
+   7. RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: 400px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .movie {
+        flex-direction: column;
+    }
+
+    .movie-image {
+        width: 180px;
+        height: 260px;
+    }
+
+    .comments {
+        padding: 30px 20px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    main {
+        padding: 50px 15px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    section h2 {
+        font-size: 26px;
+    }
+
+    .movie h3 {
+        font-size: 24px;
+    }
+
+    .movie-image {
+        width: 100%;
+        height: auto;
+    }
+}
